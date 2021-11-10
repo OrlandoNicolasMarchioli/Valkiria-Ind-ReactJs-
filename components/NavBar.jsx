@@ -1,26 +1,31 @@
+/* rafc */
+/* rafcp */
+/* rafce */
+import React from "react";
 
-
-function NavBar(){
+/* Los componentes comienzan con mayuscula */
+const Nav = ()=>{
     return(
-        <nav>
-            <li><a>Inicio</a></li>
-            <li>
-                <a>Productos</a>
+        <nav className="NavBar">
+            <li className="NavBar__li"><a href="#">Inicio</a></li>
+            <li className="NavBar__li">
+                <a href="#">Productos</a>
                 <ul>
-                    <li><a href="#">Abrigos</a></li>
-                    <li><a href="#">Pantalones</a></li>
-                    <li><a href="#">Remeras</a></li>
-                    <li><a href="#">Accesorios</a></li>
+                    <li className="NavBar__li__ul__li"><a href="#">Abrigos</a></li>
+                    <li className="NavBar__li__ul__li"><a href="#">Pantalones</a></li>
+                    <li className="NavBar__li__ul__li"><a href="#">Remeras</a></li>
+                    <li className="NavBar__li__ul__li"><a href="#">Accesorios</a></li>
                 </ul>
             </li>
-            <li><a>Contacto</a></li>
-            <li>
-                <a>Search</a>
+            <li className="NavBar__li"><a href="#">Contacto</a></li>
+            <li className="NavBar__li">
+                <a href="#">Search</a>
                 <prompt></prompt>
             </li>
         </nav>
     )
 }
 
+export default Nav;
 
-export default NavBar;
+
