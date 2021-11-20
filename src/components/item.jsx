@@ -13,11 +13,12 @@ function Item() {
     }, [])
 
     function getCard(){
-        fetch(db)//fetch es una promesa
-        .then(dataBase =>{//recibo el archivo json
-            const {data = []} = dataBase //muestro el archivo de mejor forma
-            setProduct(data)//le paso data a mi estado
-        })
+        setTimeout(()=>{
+            fetch(db)
+        .then(response => response.json())
+        .then(data => {console.log(data);setProduct(data)});
+        },2000)
+
     }
 
     return (
@@ -27,7 +28,7 @@ function Item() {
 
                 return(
                     <div>
-                        <img className="sectionProduct__img" src={product.img}></img>
+                        <img className="sectionProduct__img" src={product.img} alt="img"></img>
                         <h2 className="sectionProduct__title">{product.name}</h2>
                         <h3 className="sectionProduct__price">{product.price}</h3>
                         <button>Agregar al carrito</button>

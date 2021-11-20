@@ -1,7 +1,7 @@
 import NavBar from './components/NavBar';
 import Carrousel from './components/Carrousel';
-import Item from './components/item';
 import './scss/app.scss';
+import Constructor from './components/itemConstructor';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <>
       <NavBar/>
       <Carrousel/>
-      <Item/>
+      <Constructor/>
     </>
   );
 }

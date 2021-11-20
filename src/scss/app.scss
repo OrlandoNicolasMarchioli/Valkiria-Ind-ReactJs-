@@ -84,38 +84,50 @@
 }
 
 /* Inicio producto */
+.sectionConstructorItems{
+    display: flex;
+    flex-flow: row wrap;
 
-.sectionProduct{
+    .sectionProduct{
 
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
 
-        div{
-            .sectionProduct__img{
-                width: 25vw;
-                height: 63vh;
-            }
-            h2{
-                color : $bgColorSweetPink
-            }
-            button{
-                border: solid 3px $bgColorSweetPink;
-                background-color: transparent;
-                border-radius: 4px;
-                padding: 3px 7px;
-                color: $bgColorSweetPink;
-                font-weight: 600;
-                font-size: 1rem;
-                cursor: pointer;
 
-                &:hover{
-                    background-color: $bgColorSweetPink;
-                    color: $bgColorWhite;
-                    border-color: transparent;
-                    transition: .5s;
+            div{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                margin-top: 1rem;
+                box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+
+                .sectionProduct__img{
+                    width: 23vw;
+                    height: 63vh;
+                }
+                h2{
+                    color : $bgColorSweetPink
+                }
+                button{
+                    border: solid 3px $bgColorSweetPink;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    padding: 3px 7px;
+                    color: $bgColorSweetPink;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    margin-bottom: .5rem;
+
+                    &:hover{
+                        background-color: $bgColorSweetPink;
+                        color: $bgColorWhite;
+                        border-color: transparent;
+                        transition: .5s;
+                    }
                 }
             }
-        }
+    }
 }
