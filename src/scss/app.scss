@@ -1,0 +1,121 @@
+@import 'variables';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Inicio Navbar general */
+.NavBar{
+    display : flex;
+    flex-flow : row wrap;
+    width : 100%;
+    background-image : linear-gradient(to right, $bgColorWhite,$bgColorSweetPink);
+    height : 25vh;
+    align-items : center;
+    list-style : none;
+    position: fixed;
+
+    .logo{
+        height: 25vh;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        img{
+            height: 30px;
+        }
+    }
+
+    .NavBar__ul{
+        display : flex;
+        flex-flow : row wrap;
+        list-style: none;
+        width: 75%;
+        justify-content: end;
+        .NavBar__li{
+
+            margin-left: 1rem;
+
+            a{
+                text-decoration: none;
+                color: $bgColorWhite;
+                font-size: 1.2rem;
+                border: 1.5px solid transparent;
+                padding: 2px 10px;
+
+                &:hover{
+                    border: 1.5px solid $bgColorWhite;
+                    border-radius: 4px;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+}
+
+/* Fin Navbar general */
+
+/* Inicio carrousel index */
+
+.sectionCarrousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100;
+
+    .sectionCarrousel__containerImg1{
+        width: 100;
+
+        img{
+            width: 100%;
+        }
+    }
+    .sectionCarrousel__containerImg2{
+        display: none;
+    }
+    .sectionCarrousel__containerImg3{
+        display: none;
+    }
+}
+
+/* Inicio producto */
+
+.sectionProduct{
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        box-shadow: 4px 5px 10px rgba(0,0,0,0.15);
+
+        div{
+            .sectionProduct__img{
+                width: 25vw;
+                height: 63vh;
+            }
+            h2{
+                color : $bgColorSweetPink
+            }
+            button{
+                border: solid 3px $bgColorSweetPink;
+                background-color: transparent;
+                border-radius: 4px;
+                padding: 3px 7px;
+                color: $bgColorSweetPink;
+                font-weight: 600;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: $bgColorSweetPink;
+                    color: $bgColorWhite;
+                    border-color: transparent;
+                    transition: .5s;
+                }
+            }
+        }
+}

@@ -1,0 +1,111 @@
+[
+        {
+            "id" : 1,
+            "img" : "assets/productos/index/image2.jpeg",
+            "name" : "Top cocó",
+            "price" : "$850"
+        },
+        {
+            "id" : 2,
+            "img" : "assets/productos/index/image11.jpeg",
+            "name" : "Blusa Chloe",
+            "price" : "$2100"
+        },
+        {
+            "id" : 3,
+            "img" : "assets/productos/index/image8.jpeg",
+            "name" : "Pantalon Leg clásico",
+            "price" : "$2600"
+        },
+        {
+            "id" : 4,
+            "img" : "assets/productos/index/image15.jpeg",
+            "name" : "Jean mom clásico",
+            "price" : "$2500"
+        },
+        {
+            "id" : 5,
+            "img" : "assets/productos/index/image10.jpeg",
+            "name" : "Blazer Moscú",
+            "price" : "$3100"
+        },
+        {
+            "id" : 6,
+            "img" : "assets/productos/index/image13.jpeg",
+            "name" : "Jacket Atenas",
+            "price" : "$2500"
+        },
+        {
+            "id" : 7,
+            "img" : "assets/productos/billeteras.jpg",
+            "name" : "Billeteras",
+            "price" : "$1200"
+        },
+        {
+            "id" : 8,
+            "img" : "assets/productos/jeanRotoNegro.jpg",
+            "name" : "Jean break black",
+            "price" : "$2200"
+        },
+        {
+            "id" : 9,
+            "img" : "assets/productos/jeanRoto2.jpg",
+            "name" : "Juan Blue",
+            "price" : "$2300"
+        },
+        {
+            "id" : 10,
+            "img" : "assets/productos/index/image20.jpeg",
+            "name" : "Body Barcelona",
+            "price" : "$900"
+        },
+        {
+            "id" : 11,
+            "img" : "assets/productos/sweater.jpg",
+            "name" : "Sweater Sweet Pink",
+            "price" : "$1700"
+        },
+        {
+            "id" : 12,
+            "img" : "assets/productos/sweater2.jpg",
+            "name" : "Sweater Grey",
+            "price" : "$1700"
+        },
+        {
+            "id" : 13,
+            "img" : "assets/productos/index/image7.jpeg",
+            "name" : "Top Sweet Green",
+            "price" : "$850"
+        },
+        {
+            "id" : 14,
+            "img" : "assets/productos/carteraYGorra.jpg",
+            "name" : "Riñonera classic",
+            "price" : "$1500"
+        },
+        {
+            "id" : 15,
+            "img" : "assets/productos/buzo.jpg",
+            "name" : "Buzo Harvard",
+            "price" : "$1700"
+        },
+        {
+            "id" : 16,
+            "img" : "assets/productos/index/1.jpeg",
+            "name" : "Sweater Wolf",
+            "price" : "$1700"
+        },
+        {
+            "id" : 17,
+            "img" : "aseets/productos/cinturon.jpg",
+            "name" : "Cinturon flower",
+            "price" : "$1400"
+        },
+        {
+            "id" : 18,
+            "img" : "assets/productos/jeanRoto.jpg",
+            "name" : "Jean Blue",
+            "price" : "$2300"
+        }
+
+]
