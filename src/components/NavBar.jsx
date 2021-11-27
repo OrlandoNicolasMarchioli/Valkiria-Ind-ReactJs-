@@ -2,7 +2,7 @@
 /* rafcp */
 /* rafce */
 import React from "react";
-
+import {Link} from 'react-router-dom';
 
 let dropDown ={
     display : 'none'
@@ -14,14 +14,14 @@ let dropDown ={
 const NavBar = ()=>{
     return(
         <nav className="NavBar">
-            <img className="logo" src='assets/logo.png'/>
+            <Link to='/'><img className="logo" src='assets/logo.png'/></Link>
             <ul className="NavBar__ul">
-                <li className="NavBar__li"><a href="#">Inicio</a></li>
+                <Link to='/' ><li className="NavBar__li"><a>Inicio</a></li></Link>
                 <li className="NavBar__li">
-                    <a href="#">Productos</a>
+                    <Link to='/productos/'><a>Productos</a></Link>
                     <ul style={dropDown}>
                         <div className="NavBar__li__Buscador">
-                            <a href="#">Encontra tu producto</a>
+                            <a>Encontra tu producto</a>
                             <input type='text' placeholder/>
                         </div>
                         <li className="NavBar__li__ul__li"><a href="#">Abrigos</a></li>
@@ -30,12 +30,12 @@ const NavBar = ()=>{
                         <li className="NavBar__li__ul__li"><a href="#">Accesorios</a></li>
                     </ul>
                 </li>
-                <li className="NavBar__li"><a href="#">Contacto</a></li>
+                <Link to='/contacto/'><li className="NavBar__li"><a>Contacto</a></li></Link>
                 <li className="NavBar__li">
 
                 </li>
             </ul>
-            <button><img src='assets/bolsa.png'/></button>
+            <Link to="/carrito"><button><img src='assets/bolsa.png'/></button></Link>
         </nav>
     )
 }

@@ -9,7 +9,11 @@ function Item() {
     const [product, setProduct] = useState([])//estado con todos los productos del Json
 
     useEffect(() => {//utilizo useEfect para el renderizado asincrono
-        getCard()
+        try{
+            getCard()
+        }catch(err){
+            console.log(err)
+        }
     }, [])
 
     function getCard(){

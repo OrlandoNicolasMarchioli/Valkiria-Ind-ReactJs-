@@ -1,5 +1,5 @@
 import NavBar from './components/NavBar';
-import Carrousel from './components/Carrousel';
+import {BrowserRouter,Routes,Route} from 'react-router-dom' /* me da el ambito donde voy a usar el enrutado */
 import './scss/app.scss';
 import Constructor from './components/itemConstructor';
 
@@ -7,11 +7,14 @@ import Constructor from './components/itemConstructor';
 function App() {
 
   return (
-    <>
-      <NavBar/>
-      <Carrousel/>
-      <Constructor/>
-    </>
+    <BrowserRouter>
+      <>
+        <NavBar/>
+        <Routes>
+          <Route exact path='/' element={<Constructor/>}/>
+        </Routes>
+      </>
+    </BrowserRouter>
   );
 }
 

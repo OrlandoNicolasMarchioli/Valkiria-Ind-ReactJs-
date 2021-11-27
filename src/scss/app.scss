@@ -20,6 +20,7 @@
 
     .logo{
         height: 25vh;
+        cursor: pointer;
     }
     button{
         background-color: transparent;
@@ -61,25 +62,30 @@
 /* Fin Navbar general */
 
 /* Inicio carrousel index */
-
-.sectionCarrousel{
+.sectionConstructorItems{
     display: flex;
-    flex-direction: column;
+    flex-flow: row nowrap;
+    justify-content: center;
     align-items: center;
-    width: 100;
-
-    .sectionCarrousel__containerImg1{
+    .sectionCarrousel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100;
 
-        img{
-            width: 100%;
+        .sectionCarrousel__containerImg1{
+            width: 100;
+
+            img{
+                width: 100%;
+            }
         }
-    }
-    .sectionCarrousel__containerImg2{
-        display: none;
-    }
-    .sectionCarrousel__containerImg3{
-        display: none;
+        .sectionCarrousel__containerImg2{
+            display: none;
+        }
+        .sectionCarrousel__containerImg3{
+            display: none;
+        }
     }
 }
 
