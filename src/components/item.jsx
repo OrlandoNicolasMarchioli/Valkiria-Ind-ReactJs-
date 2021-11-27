@@ -1,29 +1,47 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 
 function Item() {
-    /* const [product, setProduct] = useState([]) */
 
     const db = 'dataBase.json'
 
     const [product, setProduct] = useState([])//estado con todos los productos del Json
 
+    const { idCategoria } = useParams()
+
     useEffect(() => {//utilizo useEfect para el renderizado asincrono
-        try{
-            getCard()
-        }catch(err){
-            console.log(err)
+        if (idCategoria) {
+            try{
+                fetch(db)
+                .then(response => response.json())
+                .then(data => {setProduct(data.filter(product => product.category === idCategoria))});/* filtro de categorias */
+            }catch(err){
+                console.log(err)
+            }
+        } else {
+            try{
+                fetch(db)
+                .then(response => response.json())
+                .then(data => {setProduct(data)});
+            }catch(err){
+                console.log(err)
+            }
         }
+
+
     }, [])
 
-    function getCard(){
-        setTimeout(()=>{
-            fetch(db)
+    /* function getCard(){
+        fetch(db)
         .then(response => response.json())
         .then(data => {console.log(data);setProduct(data)});
-        },2000)
-
-    }
+    } */
+    /* function filter(){
+        fetch(db)
+        .then(response => response.json())
+        .then(data => {console.log(data);setProduct(data.filter(product => product.idCategoria === idCategoria))});
+    } */
 
     return (
         <section className="sectionProduct">
