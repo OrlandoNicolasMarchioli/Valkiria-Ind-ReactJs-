@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
-import {useParams} from 'react-router-dom'
+import {Link,useParams} from 'react-router-dom'
 
 function Item() {
 
@@ -32,17 +32,6 @@ function Item() {
 
     }, [idCategoria])
 
-    /* function getCard(){
-        fetch(db)
-        .then(response => response.json())
-        .then(data => {console.log(data);setProduct(data)});
-    } */
-    /* function filter(){
-        fetch(db)
-        .then(response => response.json())
-        .then(data => {console.log(data);setProduct(data.filter(product => product.idCategoria === idCategoria))});
-    } */
-
     return (
         <section className="sectionProduct">
         {
@@ -54,6 +43,7 @@ function Item() {
                         <h2 className="sectionProduct__title">{product.name}</h2>
                         <h3 className="sectionProduct__price">{product.price}</h3>
                         <button>Agregar al carrito</button>
+                        <Link to={`/${product.id}`}><button>Ver mas</button></Link>
                     </div>
                 )
             })

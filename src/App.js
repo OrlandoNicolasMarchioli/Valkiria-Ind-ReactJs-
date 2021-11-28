@@ -12,7 +12,8 @@ function App() {
         <NavBar/>
         <Routes>
           <Route exact path='/' element={<Constructor/>}/>
-          <Route exact path='/productos/:idCategoria' element={<Constructor/>}/>
+          <Route exact path='/:idCategoria' element={<Constructor/>}/>
+          <Route exact path='/:idProducto' element={<Constructor/>}/>
         </Routes>
       </>
     </BrowserRouter>
