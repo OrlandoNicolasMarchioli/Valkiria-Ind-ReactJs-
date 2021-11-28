@@ -21,6 +21,7 @@
     .logo{
         height: 25vh;
         cursor: pointer;
+        display: flex;
     }
     button{
         background-color: transparent;
@@ -37,9 +38,15 @@
         list-style: none;
         width: 75%;
         justify-content: end;
+        align-items: center;
         .NavBar__li{
-            color: black;
+            color: $bgColorWhite;
             margin-left: 1rem;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
 
             a{
                 text-decoration: none;

@@ -14,11 +14,10 @@ let dropDown ={
 const NavBar = ()=>{
     return(
         <nav className="NavBar">
-            <ul className="NavBar__ul">
             <Link to='/'><img className="logo" src='assets/logo.png' alt="imagen logo"/></Link>
+            <ul className="NavBar__ul">
                 <Link to='/' ><li className="NavBar__li"><a>Inicio</a></li></Link>
-                <li className="NavBar__li">
-                    <Link to='/productos/'><a>Productos</a></Link>
+                <Link to='/productos/'><li className="NavBar__li"><a>Productos</a></li></Link>
                     <ul style={dropDown}>
                         <div className="NavBar__li__Buscador">
                             <a>Encontra tu producto</a>
@@ -29,11 +28,7 @@ const NavBar = ()=>{
                         <Link to="/remeras/"><li className="NavBar__li__ul__li"><a>Remeras</a></li></Link>
                         <Link to="/accesorios/"><li className="NavBar__li__ul__li"><a>Accesorios</a></li></Link>
                     </ul>
-                </li>
                 <Link to='/contacto/'><li className="NavBar__li"><a>Contacto</a></li></Link>
-                <li className="NavBar__li">
-
-                </li>
             </ul>
             <Link to="/carrito/"><button><img src='assets/bolsa.png'/></button></Link>
         </nav>

@@ -30,7 +30,7 @@ function Item() {
         }
 
 
-    }, [])
+    }, [idCategoria])
 
     /* function getCard(){
         fetch(db)
