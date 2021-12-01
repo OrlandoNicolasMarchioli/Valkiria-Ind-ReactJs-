@@ -24,8 +24,6 @@ function Cart(){
                             <img className="sectionProduct__img" src={item.img} alt="img"></img>
                             <h2 className="sectionProduct__title">{item.name}</h2>
                             <h3 className="sectionProduct__price">{item.price}</h3>
-                            <button onClick={agregar}>Agregar al carrito</button>
-                            <Link to={`/`+id}><button>Ver mas</button></Link>
                         </div>
             </section>
                 )
