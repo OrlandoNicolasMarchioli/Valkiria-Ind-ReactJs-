@@ -1,11 +1,11 @@
 import React from 'react'
 import ItemContainer from './itemContainer'
-import Carrousel from './Carrousel'
+import Links from './Links'
 /* import ItemDetailContainer from './itemDetailContainer' */
 const Constructor = () => {
     return (
         <section className="sectionConstructorItems">
-            {Carrousel()}
+            {Links()}
             {ItemContainer()}
         </section>
     )

@@ -68,6 +68,37 @@
 
 /* Fin Navbar general */
 
+.section__enlaces{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .enlace1{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 40vw;
+        height: 60vh;
+        justify-content: space-evenly;
+    }
+    .enlace2_3_4{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 50vw;
+        height: 60vh;
+        justify-content: space-evenly;
+
+        .enlace2{
+            img{
+                height: 30vh;
+            }
+        }
+    }
+
+}
+
 /* Inicio carrousel index */
 .sectionConstructorItems{
     display: flex;

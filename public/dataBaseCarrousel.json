@@ -1,0 +1,24 @@
+[
+    {
+        "id" : 1,
+        "category" : "remeras",
+        "img" : "assets/carrousel/foto1.jpg",
+        "name" : "Top cocó",
+        "price" : "$850"
+    },
+    {
+        "id" : 2,
+        "category" : "remeras",
+        "img" : "assets/carrousel/foto2.jpg",
+        "name" : "Blusa Chloe",
+        "price" : "$2100"
+    },
+    {
+        "id" : 3,
+        "category" : "New season",
+        "img" : "assets/carrousel/foto3.jpg",
+        "name" : "Pantalon Leg clásico",
+        "price" : "$2600"
+    }
+
+]
