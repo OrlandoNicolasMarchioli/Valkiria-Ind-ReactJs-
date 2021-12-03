@@ -20,7 +20,7 @@ const NavBar = ()=>{
                 <Link to='/accesorios'><li className="NavBar__li"><a>Accesorios</a></li></Link>
                 <Link to='/contacto/'><li className="NavBar__li"><a>Contacto</a></li></Link>
             </ul>
-            <Link to="/carrito/"><button><img src='assets/bolsa.png' alt="imagen Carrito"/></button></Link>
+            <Link to="/carrito"><button><img src='assets/bolsa.png' alt="imagen Carrito"/></button></Link>
         </nav>
     )
 }

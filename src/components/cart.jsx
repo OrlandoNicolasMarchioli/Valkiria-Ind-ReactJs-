@@ -11,6 +11,7 @@ function Cart(){
         let temp = 0;//para saber el valor total
         cart.map((item)=>{
             temp = temp + item.price;
+            return(temp)
         })
         setTotal(temp)
     },[])

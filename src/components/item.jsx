@@ -9,16 +9,16 @@ function Item (img, id, category, name, price) {
 
     function agregar(){
         const product = {
-            id:id,
             img:img,
-            price:price,
+            id:id,
             category:category,
-            name:name
+            name:name,
+            price:price
         }
         const temporal = cart;
         temporal.push(product);
         setCart(temporal)
-
+        console.log(product)
     }
 
 
@@ -38,3 +38,4 @@ function Item (img, id, category, name, price) {
 }
 
 export default Item
+

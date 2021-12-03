@@ -1,19 +1,36 @@
 import React from 'react'
-import { useEffect,useState } from 'react';
+import { useEffect,useState,useContext } from 'react';
+import { CartContext } from "./cartContext";
 
 
-const DetalleProduct = (props) => {
+const DetalleProduct = (prod) => {
 
-    const [identificador] = props.match.params.id;
+    const [identificador] = prod.id;
     const [datos, setDatos] = useState({});
 
 
     const getDatos = ()=>{
-        fetch('dataBase.json' + identificador)
+        fetch('http://localhost:3000/' + identificador)
         .then(res=>res.json())
         .then((resp)=>{
             setDatos(resp)
         })
+    }
+
+    const [cart,setCart] = useContext(CartContext)
+
+    function agregar(){
+        const product = {
+            img:prod.img,
+            id:prod.id,
+            category:prod.category,
+            name:prod.name,
+            price:prod.price
+        }
+        const temporal = cart;
+        temporal.push(product);
+        setCart(temporal)
+        console.log(product)
     }
 
     useEffect(() => {
@@ -28,7 +45,7 @@ const DetalleProduct = (props) => {
                         <img className="sectionProduct__img" src={datos.img} alt="img"></img>
                         <h2 className="sectionProduct__title">{datos.name}</h2>
                         <h3 className="sectionProduct__price">{datos.price}</h3>
-                        <button>Agregar al carrito</button>
+                        <button onClick={agregar}>Agregar al carrito</button>
                     </div>
         </section>
     )
