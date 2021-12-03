@@ -11,19 +11,21 @@ function ItemContainer() {
 
     const {idCategoria} = useParams()//capturo el parametro del a ruta
 
-    const getItem = ()=>{
-        fetch('dataBase.json')
-        .then(resp => resp.json())
-        .then((resp)=>{setItems(resp)})
-    }
-
     useEffect(() => {//utilizo useEfect para el renderizado asincrono
-        if (idCategoria) {
-            fetch('dataBase.json')
-            .then(resp => resp.json())
-            .then((resp)=>{setItems(resp.filter(item => item.category === idCategoria))})
-        } else {
-            getItem()
+        try{
+            if (idCategoria) {
+                fetch('dataBase.json')
+                .then(resp => resp.json())
+                .then((resp)=>{setItems(resp.filter(item => item.category === idCategoria))})
+                console.log(idCategoria)
+
+            } else {
+                fetch('dataBase.json')
+                .then(resp => resp.json())
+                .then((resp)=>{setItems(resp)})
+            }
+        }catch(err){
+            console.log(err)
         }
     }, [idCategoria])
 
