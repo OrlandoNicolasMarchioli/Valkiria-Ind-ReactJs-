@@ -87,6 +87,7 @@
         height: 80vh;
         justify-content: center;
         object-fit: cover;
+        background-size:cover;
 
         h4{
             color: $bgColorWhite;
@@ -126,7 +127,7 @@
             width: 90%;
             height: 34vh;
             justify-content: center;
-            margin-top: -1rem;
+            background-size:cover;
 
             h4{
                 color: $bgColorWhite;
@@ -160,16 +161,18 @@
             align-items: center;
             justify-content: space-evenly;
             width: 90%;
+            height: 80%;
 
             .enlace3{
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
                 width: 90%;
-                height: 40vh;
-                margin-top: 3.8rem;
+                height: 80%;
+                margin-top: 2rem;
                 justify-content: center;
                 object-fit: cover;
+                background-size:cover;
 
                 h4{
                     color: $bgColorWhite;
@@ -201,10 +204,11 @@
                 flex-flow: column nowrap;
                 align-items: center;
                 width: 90%;
-                height: 40vh;
-                margin-top: 3.8rem;
+                height: 80%;
+                margin-top: 2rem;
                 justify-content: center;
                 object-fit: cover;
+                background-size:cover;
 
                 h4{
                     color: $bgColorWhite;
