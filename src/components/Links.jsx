@@ -23,21 +23,21 @@ let enlace4 ={
 
             <div className="enlace1" style={enlace1}>
                 <h4 className="titleEnlace">Pantalones</h4>
-                <Link to="/pantalones"><a className="botonEnlace">VER MÁS</a></Link>
+                <Link to="/categoria/pantalones"><a className="botonEnlace">VER MÁS</a></Link>
             </div>
             <section className="enlaces2_3_4">
                 <div className="enlace2" style={enlace2}>
                     <h4 className="titleEnlace2">Abrigos</h4>
-                    <Link to="/abrigos"><a className="botonEnlace">VER MÁS</a></Link>
+                    <Link to="/categoria/abrigos"><a className="botonEnlace">VER MÁS</a></Link>
                 </div>
                 <div className="container">
                     <div className="enlace3" style={enlace3}>
                         <h4 className="titleEnlace">Remeras</h4>
-                        <Link to="/remeras"><a  className="botonEnlace">VER MÁS</a></Link>
+                        <Link to="/categoria/remeras"><a  className="botonEnlace">VER MÁS</a></Link>
                     </div>
                     <div className="enlace4" style={enlace4}>
                         <h4 className="titleEnlace">Accesorios</h4>
-                        <Link to="/accesorios"><a className="botonEnlace">VER MÁS</a></Link>
+                        <Link to="/categoria/accesorios"><a className="botonEnlace">VER MÁS</a></Link>
                     </div>
                 </div>
             </section>
