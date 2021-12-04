@@ -1,0 +1,25 @@
+[
+    {
+        "id" : 1,
+        "img" : "assets/productos/productos/",
+        "description" : "Top cocó"
+    },
+    {
+        "id" : 2,
+        "img" : "assets/carrousel/foto2.jpg",
+        "description" : "Blusa Chloe"
+
+    },
+    {
+        "id" : 3,
+        "img" : "assets/carrousel/foto3.jpg",
+        "description" : "Pantalon Leg clásico"
+
+    },
+    {
+        "id" : 4,
+        "img" : "assets/carrousel/foto3.jpg",
+        "description" : "Pantalon Leg clásico"
+    }
+
+]

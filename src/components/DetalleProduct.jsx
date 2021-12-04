@@ -5,12 +5,11 @@ import { CartContext } from "./cartContext";
 
 const DetalleProduct = (prod) => {
 
-    const [identificador] = prod.id;
     const [datos, setDatos] = useState({});
 
 
     const getDatos = ()=>{
-        fetch('http://localhost:3000/' + identificador)
+        fetch('http://localhost:3000/' + prod.id)
         .then(res=>res.json())
         .then((resp)=>{
             setDatos(resp)

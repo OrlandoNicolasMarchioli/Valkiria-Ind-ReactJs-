@@ -52,6 +52,7 @@
                 text-decoration: none;
                 color: $bgColorWhite;
                 font-size: 1.2rem;
+                font-family: $font-family;
                 border: 1.5px solid transparent;
                 padding: 2px 10px;
 
@@ -72,27 +73,161 @@
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-top: 25vh;
+    margin-bottom: 5rem;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
 
     .enlace1{
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        width: 40vw;
-        height: 60vh;
-        justify-content: space-evenly;
+        width: 35vw;
+        height: 80vh;
+        justify-content: center;
+        object-fit: cover;
+
+        h4{
+            color: $bgColorWhite;
+            font-family: $font-family;
+            font-size: 5rem;
+            font-weight: 600;
+        }
+        a{
+            color: $bgColorWhite;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            border: solid 1.5px;
+            padding: 1px;
+            border-radius: 7px;
+            background-color: transparent;
+
+            &:hover{
+                background-color: $bgColorSweetPink;
+                transform: scale(1.05,1.05);
+                transition: .5s;
+            }
+        }
     }
-    .enlace2_3_4{
+    .enlaces2_3_4{
         display: flex;
         flex-flow: column nowrap;
-        align-items: center;
-        width: 50vw;
-        height: 60vh;
-        justify-content: space-evenly;
+        align-items:center;
+        width: 60vw;
+        height: 84vh;
 
         .enlace2{
-            img{
-                height: 30vh;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 90%;
+            height: 34vh;
+            justify-content: center;
+            margin-top: -1rem;
+
+            h4{
+                color: $bgColorWhite;
+                font-family: $font-family;
+                font-size: 5rem;
+                font-weight: 600;
+            }
+
+            a{
+                color: $bgColorWhite;
+                text-decoration: none;
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-top: 1rem;
+                border: solid 1.5px;
+                padding: 1px;
+                border-radius: 7px;
+                background-color: transparent;
+    
+                &:hover{
+                    background-color: $bgColorSweetPink;
+                    transform: scale(1.05,1.05);
+                    transition: .5s;
+                }
+            }
+        }
+
+        .container{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 90%;
+
+            .enlace3{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                width: 90%;
+                height: 40vh;
+                margin-top: 3.8rem;
+                justify-content: center;
+                object-fit: cover;
+
+                h4{
+                    color: $bgColorWhite;
+                    font-family: $font-family;
+                    font-size: 4rem;
+                    font-weight: 600;
+                }
+                a{
+                    color: $bgColorWhite;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    border: solid 1.5px;
+                    padding: 1px;
+                    border-radius: 7px;
+                    background-color: transparent;
+        
+                    &:hover{
+                        background-color: $bgColorSweetPink;
+                        transform: scale(1.05,1.05);
+                        transition: .5s;
+                    }
+                }
+            }
+
+            .enlace4{
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                width: 90%;
+                height: 40vh;
+                margin-top: 3.8rem;
+                justify-content: center;
+                object-fit: cover;
+
+                h4{
+                    color: $bgColorWhite;
+                    font-family: $font-family;
+                    font-size: 4rem;
+                    font-weight: 600;
+                }
+                a{
+                    color: $bgColorWhite;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    border: solid 1.5px;
+                    padding: 1px;
+                    border-radius: 7px;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: $bgColorSweetPink;
+                        transform: scale(1.05,1.05);
+                        transition: .5s;
+                    }
+                }
             }
         }
     }
@@ -138,6 +273,8 @@
             flex-flow: row wrap;
             align-items: center;
             justify-content: space-evenly;
+            margin-left: .5rem;
+            margin-right: .5rem;
 
 
             div{
@@ -173,5 +310,26 @@
                     }
                 }
             }
+    }
+}
+
+/* seccion carrito de compras */
+
+.sectionProduct{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    div{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .sectionProduct__img{
+            height: 30vh;
+            width: 20vw;
+        }
     }
 }
