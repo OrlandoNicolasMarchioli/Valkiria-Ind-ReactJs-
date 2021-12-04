@@ -1,12 +1,12 @@
 import React from 'react'
 import ItemContainer from './itemContainer'
-import Links from './Links'
+import Links from '../Items/Links'
 /* import ItemDetailContainer from './itemDetailContainer' */
 const Constructor = () => {
     return (
         <section className="sectionConstructorItems">
-            {Links()}
-            {ItemContainer()}
+            <Links />
+            <ItemContainer />
         </section>
     )
 }
