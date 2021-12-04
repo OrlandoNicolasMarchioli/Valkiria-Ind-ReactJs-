@@ -17,11 +17,11 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Constructor/>}/>
             <Route exact path='/abrigos' element={<Constructor/>}/>
-            <Route exact path='/:idCategoria' element={<Constructor/>}/>
-            <Route exact path='/:idProducto' element={<DetalleProduct/>}/>
-            <Route exact path='/pantalones' element={<Constructor/>}/>
-            <Route exact path='/remeras' element={<Constructor/>}/>
-            <Route exact path='/accesorios' element={<Constructor/>}/>
+            <Route exact path='categoria/:idCategoria' element={<Constructor/>}/>
+            <Route exact path='detalle/:idProducto' element={<DetalleProduct/>}/>
+            <Route exact path='/categoria/pantalones' element={<Constructor/>}/>
+            <Route exact path='/categoria/remeras' element={<Constructor/>}/>
+            <Route exact path='/categoria/accesorios' element={<Constructor/>}/>
             <Route exact path='/carrito' element={<Cart/>}/>
           </Routes>
         </>
