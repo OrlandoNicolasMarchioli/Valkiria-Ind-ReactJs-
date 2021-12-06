@@ -5,12 +5,25 @@ import { CartContext } from "./cartContext";
 function Cart(){
 
     const [cart] = useContext(CartContext)
+    const [cont, setCont] = useState(0)
     let [total,setTotal] = useState(0);
+
+    /* const preventNegative = (cont)=>{
+        if(cont > 0){
+            return(
+                setCont(0)
+            )
+        }else{
+            return(
+                setCont(cont)
+            )
+        }
+    } */
 
     useEffect(()=>{
         let temp = 0;//para saber el valor total
         cart.map((item)=>{
-            temp = temp + item.price;
+            temp = temp + item.price*cont;
             return(temp)
         })
         setTotal(temp)
@@ -25,6 +38,11 @@ function Cart(){
                             <img className="sectionProduct__img" src={item.img} alt="img"></img>
                             <h2 className="sectionProduct__title">{item.name}</h2>
                             <h3 className="sectionProduct__price">{item.price}</h3>
+                        </div>
+                        <div className="product__counter">
+                            <button onClick={()=> setCont(cont - 1)}>-</button>
+                            <p>{cont}</p>
+                            <button onClick={()=> setCont(cont + 1)}>+</button>
                         </div>
             </section>
                 )

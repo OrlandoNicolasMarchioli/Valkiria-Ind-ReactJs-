@@ -321,9 +321,9 @@
 
 .sectionProduct{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content:space-evenly;
 
     div{
         display: flex;
@@ -332,8 +332,33 @@
         justify-content: center;
 
         .sectionProduct__img{
-            height: 30vh;
+            height: 50vh;
             width: 20vw;
         }
     }
+    .product__counter{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            width: 2.5rem;
+            height: 1.5rem;
+            margin: 3px;
+            background-color: $bgColorSweetPink;
+            cursor: pointer;
+            border: solid 1px transparent;
+            border-radius: 3px;
+
+            &:hover{
+                background-color: transparent;
+                border: solid 2px $bgColorSweetPink;
+                transform: scale(1.05,1.05);
+                transition: 0.5s;
+                box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+            }
+        }
+    }
 }
+

@@ -7,7 +7,7 @@ const Constructor = () => {
     return (
         <section className="sectionConstructorItems">
             <Links />
-            <Title/>
+            {/* <Title/> */}
             <ItemContainer />
         </section>
     )

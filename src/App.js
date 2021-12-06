@@ -4,8 +4,7 @@ import './scss/app.scss';
 import Constructor from './components/Items/itemConstructor';
 import DetalleProduct from './components/Items/DetalleProduct';
 import CartProvider from './components/Cart/cartContext';
-import Cart from './components/Cart/cart';
-import ItemContainer from './components/Items/itemContainer';
+import CartContainer from './components/Cart/cartContainer';
 
 function App() {
 
@@ -18,7 +17,7 @@ function App() {
             <Route exact path='/' element={<Constructor/>}/>
             <Route exact path='categoria/:idCategoria' element={<Constructor/>}/>
             <Route exact path='detalle/:idProducto' element={<DetalleProduct/>}/>
-            <Route exact path='/carrito' element={<Cart/>}/>
+            <Route exact path='/carrito' element={<CartContainer/>}/>
           </Routes>
         </>
       </BrowserRouter>
