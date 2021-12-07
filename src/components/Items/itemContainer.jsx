@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router'//captura los parametros que defino en la ruta
+import getFirestore from '../Firebase/fireBase'
 import Item from './Item'
 
 
@@ -11,18 +12,18 @@ function ItemContainer() {
 
     const {idCategoria} = useParams()//capturo el parametro del a ruta
 
-    useEffect(() => {//utilizo useEfect para el renderizado asincrono
+    useEffect(() => {//utilizo useEfect para el renderizado asincrono\
         try{
-            if (idCategoria) {
-                fetch('dataBase.json')
-                .then(resp => resp.json())
-                .then((resp)=>{setItems(resp.filter(item => item.category === idCategoria))})
-                console.log(idCategoria)
-
-            } else {
-                fetch('dataBase.json')
-                .then(resp => resp.json())
-                .then((resp)=>{setItems(resp)})
+            if(idCategoria){
+                const db = getFirestore()
+                const dbQuery = db.collection('productos').where('category','==',idCategoria)
+                dbQuery.get()//traigo toda la base de datos
+                .fetch(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))//seteo los datos, docs.map(donde esta el array y lo mapeo)
+            }else{
+                const db = getFirestore()
+                const dbQuery = db.collection('productos')
+                dbQuery.get()//traigo toda la base de datos
+                .fetch(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))
             }
         }catch(err){
             console.log(err)

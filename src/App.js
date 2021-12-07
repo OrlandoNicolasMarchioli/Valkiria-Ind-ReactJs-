@@ -15,8 +15,8 @@ function App() {
           <NavBar/>
           <Routes>
             <Route exact path='/' element={<Constructor/>}/>
-            <Route exact path='categoria/:idCategoria' element={<Constructor/>}/>
-            <Route exact path='detalle/:idProducto' element={<DetalleProduct/>}/>
+            <Route exact path='/categoria/:idCategoria' element={<Constructor/>}/>
+            <Route exact path='/detalle/:idProducto' element={<DetalleProduct/>}/>
             <Route exact path='/carrito' element={<CartContainer/>}/>
           </Routes>
         </>
