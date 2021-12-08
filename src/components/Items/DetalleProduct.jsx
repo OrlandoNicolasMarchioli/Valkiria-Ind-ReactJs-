@@ -10,25 +10,9 @@ const DetalleProduct = (prod) => {
     const [cart,setCart] = useContext(CartContext)
     const {idProducto} = useParams()
 
-
-    const getDatos = ()=>{
-        fetch('dataBase.json')
-        .then(res=>res.json())
-        .then((resp)=>{
-            setDatos(resp.find())
-        })
-    }
-
-
-    /* function agregar(){
-
-    } */
-
     useEffect(() => {
-        getDatos();
         const db = getFirestore()
-        const dbQuery = db.collection('productos').doc('X8z63sLj9x2vb9rgEakj')//apunto a un unico documento y lo traigo (es una promesa)
-        dbQuery.get()
+        const dbQuery = db.collection('productos').doc(idProducto).get()//apunto a un unico documento y lo traigo (es una promesa)
         .then(resp => setDatos({id: resp.id, ...resp.data()}))//extraigo los datos con data
     }
         , [])

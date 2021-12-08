@@ -16,14 +16,15 @@ function ItemContainer() {
         try{
             if(idCategoria){
                 const db = getFirestore()
+                console.log(db)
                 const dbQuery = db.collection('productos').where('category','==',idCategoria)
                 dbQuery.get()//traigo toda la base de datos
-                .fetch(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))//seteo los datos, docs.map(donde esta el array y lo mapeo)
+                .then(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))//seteo los datos, docs.map(donde esta el array y lo mapeo)
             }else{
                 const db = getFirestore()
                 const dbQuery = db.collection('productos')
                 dbQuery.get()//traigo toda la base de datos
-                .fetch(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))
+                .then(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))
             }
         }catch(err){
             console.log(err)
@@ -32,7 +33,7 @@ function ItemContainer() {
 
     return (
         <>
-                {items.map((item)=>{
+                {items.map((item)=>{//Le envio al componente Item los datos recibidos de la base de datos
                     return(Item(item.img, item.id, item.category, item.name, item.price))
 
                 })}
