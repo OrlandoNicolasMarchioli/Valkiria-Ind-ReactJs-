@@ -25,6 +25,7 @@ function ItemContainer() {
                 const dbQuery = db.collection('productos')
                 dbQuery.get()//traigo toda la base de datos
                 .then(data => setItems(data.docs.map( item=> ( {id: item.id, ...item.data()} ))))
+                console.log(items)
             }
         }catch(err){
             console.log(err)

@@ -3,7 +3,7 @@ import Cart from './cart'
 import CartEmpty from './cartEmpty'
 
 const LenghtCart = ({value}) => {
-    if (value.length() == 0){
+    if (value.length() === 0){
         value = false
     }else{
         value = true
