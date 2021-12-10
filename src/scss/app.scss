@@ -238,6 +238,20 @@
 
 }
 
+/* titulo principal */
+div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    .title{
+        width: 100%;
+        color: $bgColorSweetPink;
+        font-size: 5rem;
+    }
+}
+
 /* Inicio carrousel index */
 .sectionConstructorItems{
     display: flex;
