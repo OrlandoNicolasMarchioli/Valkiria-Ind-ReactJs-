@@ -1,6 +1,5 @@
 import React,{useContext,useState,useEffect} from "react";
 import { CartContext } from "./cartContext";
-import { Link } from "react-router-dom";
 
 
 function Cart(){
@@ -8,6 +7,7 @@ function Cart(){
     const [cart] = useContext(CartContext)
     const [cont, setCont] = useState(0)
     let [total,setTotal] = useState(0);
+
 
     useEffect(()=>{
         let temp = 0;//para saber el valor total
@@ -36,8 +36,7 @@ function Cart(){
             </section>
                 )
             })}
-            <h1> Total a pagar: ${total}</h1>
-            <button>Comprar</button>
+            <h1> Total a pagar: ${total}</h1>s
         </>
     )
 

@@ -5,19 +5,10 @@ import { CartContext } from "../Cart/cartContext";
 
 function Item (img, id, category, name, price) {
 
-    const [cart,setCart] = useContext(CartContext)
+    const {addProduct} = useContext(CartContext)
 
-    function agregar(){
-        const product = {
-            img:img,
-            category:category,
-            name:name,
-            price:price
-        }
-        const temporal = cart;
-        temporal.push(product);
-        setCart(temporal)
-        console.log(product)
+    function add(){
+        addProduct(img, id, category, name, price)
     }
 
 
@@ -27,8 +18,8 @@ function Item (img, id, category, name, price) {
                         <div>
                             <img className="sectionProduct__img" src={img} alt="img"></img>
                             <h2 className="sectionProduct__title">{name}</h2>
-                            <h3 className="sectionProduct__price">{price}</h3>
-                            <button onClick={agregar}>Agregar al carrito</button>
+                            <h3 className="sectionProduct__price">${price}</h3>
+                            <button onClick={add}>Agregar al carrito</button>
                             <Link to={`/detalle/${id}`}><button>Ver mas</button></Link>
                         </div>
             </section>

@@ -12,10 +12,10 @@ const DetalleProduct = (prod) => {
 
     function agregar(){
         const product = {
-            img:cart.img,
-            category:cart.category,
-            name:cart.name,
-            price:cart.price
+            img:datos.img,
+            category:datos.category,
+            name:datos.name,
+            price:datos.price
         }
         const temporal = cart;
         temporal.push(product);
@@ -28,7 +28,7 @@ const DetalleProduct = (prod) => {
         const db = getFirestore()
         const dbQuery = db.collection('productos').doc(idProducto).get()//apunto a un unico documento y lo traigo (es una promesa)
         .then(resp => setDatos({id: resp.id, ...resp.data()}))//extraigo los datos con data
-        agregar(datos.img,datos.category,datos.name,datos.price)
+        .then(resp=> agregar(datos.img,datos.category,datos.name,datos.price))
     }
         , [])
 
