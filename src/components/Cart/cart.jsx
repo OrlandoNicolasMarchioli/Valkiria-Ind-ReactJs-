@@ -48,6 +48,7 @@ function Cart(){
                 )
             })}
             <h1> Total a pagar: ${total}</h1>
+            <button>Comprar</button>
         </>
     )
 

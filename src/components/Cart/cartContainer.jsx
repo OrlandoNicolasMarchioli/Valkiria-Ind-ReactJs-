@@ -1,6 +1,4 @@
 import React from 'react'
-import Cart from './cart'
-import CartEmpty from './cartEmpty'
 import LenghtCart from './LenghtCart'
 
 
