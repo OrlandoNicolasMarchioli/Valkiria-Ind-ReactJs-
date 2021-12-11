@@ -1,5 +1,6 @@
 import Form from "./Form"
 import Maps from "./Maps"
+import React from 'react'
 
 const Contacto = () => {
     return (
