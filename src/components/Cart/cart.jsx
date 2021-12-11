@@ -1,5 +1,6 @@
 import React,{useContext,useState,useEffect} from "react";
 import { CartContext } from "./cartContext";
+import { Link } from "react-router-dom";
 
 
 function Cart(){
@@ -7,18 +8,6 @@ function Cart(){
     const [cart] = useContext(CartContext)
     const [cont, setCont] = useState(0)
     let [total,setTotal] = useState(0);
-
-    /* const preventNegative = (cont)=>{
-        if(cont > 0){
-            return(
-                setCont(0)
-            )
-        }else{
-            return(
-                setCont(cont)
-            )
-        }
-    } */
 
     useEffect(()=>{
         let temp = 0;//para saber el valor total

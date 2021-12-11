@@ -10,7 +10,6 @@ function Item (img, id, category, name, price) {
     function agregar(){
         const product = {
             img:img,
-            id:id,
             category:category,
             name:name,
             price:price
