@@ -252,33 +252,6 @@ div{
     }
 }
 
-/* Inicio carrousel index */
-.sectionConstructorItems{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    .sectionCarrousel{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100;
-
-        .sectionCarrousel__containerImg1{
-            width: 100;
-
-            img{
-                width: 100%;
-            }
-        }
-        .sectionCarrousel__containerImg2{
-            display: none;
-        }
-        .sectionCarrousel__containerImg3{
-            display: none;
-        }
-    }
-}
 
 /* Inicio producto */
 .sectionConstructorItems{
@@ -373,6 +346,81 @@ div{
                 box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
             }
         }
+    }
+}
+
+//contacto
+.sectionContainer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    .sectionContainer__title{
+        font-size: 5rem;
+        color: $bgColorSweetPink;
+        margin-top: 30vh;
+    }
+}
+
+// cartEmpty
+
+.cartEmpty{
+    margin-top: 25vh;
+    margin-bottom: 2rem;
+
+    .cartEmpty__title{
+        font-size: 3rem;
+        color: $bgColorSweetPink;
+        font-family: $font-family;
+    }
+    .cartEmpty__secondTitle{
+        font-size: 2rem;
+        color: $bgColorSweetPink;
+        font-family: $font-family;
+    }
+    button{
+        margin-top: 1rem;
+        width: 60px;
+        height: 30px;
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 1rem;
+        color: $bgColorSweetPink;
+        border-color: $bgColorSweetPink;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $bgColorSweetPink;
+            color: $bgColorWhite;
+            border-color: $bgColorWhite;
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+            transition: .3s;
+        }
+    }
+
+}
+
+//Cart container
+
+.cartContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h1{
+        font-size: 4rem;
+        color: $bgColorSweetPink;
+        font-family: $font-family;
+        margin-top: 20vh;
+        margin-bottom: 2rem;
+        width: 95%;
+    }
+    h2{
+        color: $bgColorSweetPink;
+        font-family: $font-family;
+        width: 90%;
     }
 }
 

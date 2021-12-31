@@ -5,7 +5,7 @@ const CartEmpty = () => {
         <section className="cartEmpty">
             <h1 className="cartEmpty__title">Su carrito está vacio</h1>
             <h2 className="cartEmpty__secondTitle">vuelva al inicio para ver mas productos</h2>
-            <button>productos</button>
+            <Link to="/"><button>Inicio</button></Link>
         </section>
     )
 }

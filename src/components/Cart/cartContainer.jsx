@@ -2,6 +2,7 @@ import React from 'react'
 import Cart from './cart'
 import { CartContext } from './cartContext'
 import { useContext } from 'react'
+import CartEmpty from './cartEmpty'
 
 
 
@@ -12,7 +13,8 @@ const CartContainer = () => {
     return (
         <div className="cartContainer">
             <h1>Tus productos seleccionados</h1>
-            {<Cart/>}
+            {cart.length === 0 && <div><CartEmpty/></div>}
+            {cart.lenght != 0 && <Cart/>}
             <h2>Precio Total: {totalPrice} </h2>
         </div>
     )
