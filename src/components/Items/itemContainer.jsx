@@ -34,7 +34,7 @@ function ItemContainer() {
     return (
         <>
                 {items.map((item)=>{//Le envio al componente Item los datos recibidos de la base de datos
-                    return(Item(item.img,item.id, item.category, item.name, item.price))
+                    return(Item(item.img,item.id, item.category, item.name, item.price,))
 
                 })}
         </>

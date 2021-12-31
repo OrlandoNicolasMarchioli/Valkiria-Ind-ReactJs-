@@ -1,16 +1,15 @@
 
 import { Link } from "react-router-dom";
-import { useContext } from "react";
 import { CartContext } from "../Cart/cartContext";
+import { useContext } from "react";
 
 function Item (img, id, category, name, price) {
+    const [cart,setCart] = useContext(CartContext)
 
-    const {addProduct} = useContext(CartContext)
-
-    function add(){
-        addProduct(img, id, category, name, price)
+    const addToCart = ()=>{
+        const prod = {img: img, name: name, price: price}
+        setCart(curr =>[...curr, prod])
     }
-
 
     return (
         <>
@@ -19,7 +18,7 @@ function Item (img, id, category, name, price) {
                             <img className="sectionProduct__img" src={img} alt="img"></img>
                             <h2 className="sectionProduct__title">{name}</h2>
                             <h3 className="sectionProduct__price">${price}</h3>
-                            <button onClick={add}>Agregar al carrito</button>
+                            <button onClick={addToCart}>Agregar al carrito</button>
                             <Link to={`/detalle/${id}`}><button>Ver mas</button></Link>
                         </div>
             </section>
